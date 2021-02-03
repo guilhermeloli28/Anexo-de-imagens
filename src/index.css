@@ -1,13 +1,74 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import '~antd/dist/antd.css';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+
+:root{
+  --secondary: #4e4e4e;
+}
+/* BASE E TÍTULO */
+body{
+  font-family: "Noto Serif";
+  color: var(--secondary);
+}
+.App {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.title h2 {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 2.6rem;
+  color: var(--secondary);
+  font-family: "Noto Serif";
+  font-stretch: bold;
+}
+/* FORMULÁRIO DE UPLOAD */
+.formUpload {
+  display: flex;
+  justify-content: center;
+}
+form {
+  margin: 30px auto 10px;
+  text-align: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* LISTA DE IMAGENS */
+.img-grid {
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 40px;
+}
+.img-wrap{
+  overflow: hidden;
+  height: 0;
+  padding: 50% 0;
+  position: relative;
+  opacity: 0.8;
+}
+.img-wrap img{
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 150%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: zoom-in;
+}
+/* MODAL */
+.modalImg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+.modalImg img{
+  display: block;
+  max-width: 60%;
+  max-height: 80%;
+  height: 700px;
+  margin: 60px auto;
+  box-shadow: 3px 5px 7px rgba(0,0,0,0.5);
+  border: 3px solid white;
 }
